@@ -25,8 +25,7 @@ int ThirdNumber(int n)
         if(n <= 99 && n >= -99) Console.WriteLine("Третьей цифры нет");
         else 
         {   
-            if(n < 0) 
-                n = n * (-1);
+            if(n < 0) n = n * (-1);
             n = n % 10;
             Console.WriteLine($"Третья цифра числа: {n}");
         }

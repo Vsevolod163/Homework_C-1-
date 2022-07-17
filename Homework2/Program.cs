@@ -9,17 +9,17 @@ int SecondNumber(int n)
     }
         if(n < 0) n = n * (-1);
         n = (n / 10) % 10;
-        Console.WriteLine($"Вторая цифра числа: {n}");
-        return n;
+    return n;
 }
 
 Console.Write("Введите трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-SecondNumber(num);
+int res = SecondNumber(num);
+Console.WriteLine($"Вторая цифра числа: {res}");
 
 // Task2 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет
 
-int ThirdNumber(int n)
+void ThirdNumber(int n)
 {
     while(n >= 1000 || n <= -1000) n = n / 10;
         if(n <= 99 && n >= -99) Console.WriteLine("Третьей цифры нет");
@@ -28,8 +28,7 @@ int ThirdNumber(int n)
             if(n < 0) n = n * (-1);
             n = n % 10;
             Console.WriteLine($"Третья цифра числа: {n}");
-        }
-        return n;    
+        }    
 }
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
